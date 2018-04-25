@@ -10,6 +10,20 @@ html {
   /*overflow-y: scroll;*/
 }
 
+table {
+    border: 7rem;
+    margin: auto;
+    border-color: red;
+    width: 80%;
+    background-color:
+    rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+td {
+    padding-top: 1.5rem;
+}
+
 a {
   color: #3169B3;
 }
@@ -478,7 +492,7 @@ p, ul.text-list {
 
 
 .row {
-  max-width: 800px;
+  max-width: 80%;
   margin: 24px auto;
   padding: 0 30px;
   position: relative;
