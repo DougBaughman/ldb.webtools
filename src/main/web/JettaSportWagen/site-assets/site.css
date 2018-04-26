@@ -20,9 +20,22 @@ table {
     border-radius: 25px;
 }
 
+tbody {
+    border: red 3px solid;
+}
+
+#inner_table {
+      border: red 3px solid;
+      border-collapse: collapse;
+      width: 95%;
+      border-radius: 0;
+}
+
+
 td {
     padding-top: 1.5rem;
 }
+
 
 a {
   color: #3169B3;
