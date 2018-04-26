@@ -711,7 +711,10 @@ img.img--with_border {
 .demo-gallery {
   width: 100%;
   height: auto;
-  float: left;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .demo-gallery a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
