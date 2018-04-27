@@ -436,7 +436,7 @@
 		var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 			var parseThumbnailElements = function(el) {
-			    var thumbElements = el.childNodes,
+			    var thumbElements = getGalleryElements(el),
 			        numNodes = thumbElements.length,
 			        items = [],
 			        el,
@@ -503,6 +503,20 @@
 			    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
 			};
 
+			var getGalleryElements = function(gallery) {
+			    var result = [];
+
+			    if( gallery.className === "demo-gallery__img--main"){
+			        result.push( gallery);
+                } else {
+                    gallery.childNodes.forEach(function(node){
+                        result = result.concat( getGalleryElements( node));
+                    });
+                }
+
+                return result;
+			}
+
 			var onThumbnailsClick = function(e) {
 			    e = e || window.event;
 			    e.preventDefault ? e.preventDefault() : e.returnValue = false;
@@ -517,9 +531,13 @@
 			        return;
 			    }
 
-			    var clickedGallery = clickedListItem.parentNode;
+			    //var clickedGallery = clickedListItem.parentNode;
+                var clickedGallery = closest(clickedListItem, function(elem){
+                    return elem.className.split(" ").indexOf("demo-gallery") != -1;
+                });
 
-			    var childNodes = clickedListItem.parentNode.childNodes,
+			    //var childNodes = clickedListItem.parentNode.childNodes,
+                var childNodes = getGalleryElements(clickedGallery),
 			        numChildNodes = childNodes.length,
 			        nodeIndex = 0,
 			        index;
