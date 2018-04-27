@@ -62,9 +62,7 @@
                 <tbody>
                 <tr>
                     <td align="center">
-                        <a href="Images\P4203892.JPG" data-size="1200x900" class="demo-gallery__img--main">
-                            <img src="Thumbnails\P4203892.JPG" alt=""/>
-                        </a>
+                        <img src="Thumbnails\P4203892.JPG" class="single-gallery" onclick="openSingleImage('Images\\P4203892.JPG',['1200','900'])"/>
                     </td>
                     <td valign="TOP">
                         <h1 class="western" align="CENTER"><font
@@ -81,9 +79,7 @@
                             Combination</font></h1>
                     </td>
                     <td align="center">
-                        <a href="Images\P4203886.JPG" data-size="1200x900" class="demo-gallery__img--main">
-                            <img src="Thumbnails\P4203886.JPG" alt=""/>
-                        </a>
+                        <img src="Thumbnails\P4203886.JPG" class="single-gallery" onclick="openSingleImage('Images\\P4203886.JPG',['1200','900'])"/>
                     </td>
                 </tr>
                 </tbody>
@@ -94,28 +90,28 @@
                                                   size="6">SEL Trim</font></h2>
                         <ul>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#front_seat">leather (not V-Tex) interior</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\frontseat7.JPG',['1200','900'])"><font size="5">leather (not V-Tex) interior</font></p>
                             </li>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#misc">2.0T engine (200 horsepower at 5,100 rpm and 207 lbs.-ft. of torque between 1,800 and 5,000 rpm).</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\P3243761.JPG',['1200','900'])"><font size="5">2.0T engine (200 horsepower at 5,100 rpm and 207 lbs.-ft. of torque between 1,800 and 5,000 rpm).</font></p>
                             </li>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#misc">6sp manual transmission.</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\TMGPS.JPG',['1200','900'])"><font size="5">6sp manual transmission.</font></p>
                             </li>
                             <li>
                                 <p style="margin-bottom: 0.04in"><font size="5">panoramic sunroof </font></p>
                             </li>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#radio">DVD navigation</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\dash1.JPG',['1200','900'])"><font size="5">DVD navigation</font></p>
                             </li>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#front_seat">3 memory position power drivers seat</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\frontseat10.JPG',['1200','900'])"><font size="5">3 memory position power drivers seat</font></p>
                             </li>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#dash">dual zone climate control</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\dash8.JPG',['1200','900'])"><font size="5">dual zone climate control</font></p>
                             </li>
                             <li>
-                                <p style="margin-bottom: 0.04in"><font size="5"><a href="#dash">Homelink</a></font></p>
+                                <p style="margin-bottom: 0.04in" class="single-gallery" onclick="openSingleImage('Images\\dash9.JPG',['1200','900'])"><font size="5">Homelink</font></p>
 
                             </li>
                         </ul>
@@ -756,6 +752,22 @@
 		initPhotoSwipeFromDOM('.demo-gallery');
 
 	})();
+
+    var openSingleImage = function(image, size){
+        var item = {
+            src: image,
+            w: parseInt(size[0], 10),
+            h: parseInt(size[1], 10),
+        };
+
+        var items = [item];
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items);
+        gallery.init();
+};
+
 
 
 

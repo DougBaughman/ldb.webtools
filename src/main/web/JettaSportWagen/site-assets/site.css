@@ -44,6 +44,14 @@ a:hover {
   color: #C00;
 }
 
+.single-gallery:hover{
+    cursor: zoom-in;
+}
+
+.demo-gallery__img--main:hover{
+        cursor: zoom-in;
+}
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
