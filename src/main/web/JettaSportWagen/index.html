@@ -203,23 +203,29 @@
                                 </a>
                                 <a href="Images\dash6.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash6.JPG" alt=""/>
+                                    <figure>VW IPOD adapter:  30-pin Apple connector which presents first 5 playlists on connected device as CDs to head unit (IPOD not included).</figure>
                                 </a>
                                 <a href="Images\dash7.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash7.JPG" alt=""/>
+                                    <figure>Dual zone climate control / Heated seats</figure>
                                 </a>
                                 <a href="Images\dash8.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash8.JPG" alt=""/>
+                                    <figure>Dual zone climate control / Heated seats</figure>
                                 </a>
                                 <a href="Images\dash9.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash9.JPG" alt=""/>
+                                    <figure>Homelink (garage door opener) </figure>
                                 </a>
                             </div>
                             <div class="gallery-group" id="radio">
                                 <a href="Images\dash1.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash1.JPG" alt=""/>
+                                    <figure>DVD based navigation system</figure>
                                 </a>
                                 <a href="Images\dash2.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash2.JPG" alt=""/>
+                                    <figure>DVD based navigation system</figure>
                                 </a>
                                 <a href="Images\dash3.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\dash3.JPG" alt=""/>
@@ -237,6 +243,7 @@
                                 </a>
                                 <a href="Images\frontseat10.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\frontseat10.JPG" alt=""/>
+                                    <figure>Power driver's seat with 3 memory positions</figure>
                                 </a>
                                 <a href="Images\frontseat11.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\frontseat11.JPG" alt=""/>
@@ -281,6 +288,7 @@
                                 </a>
                                 <a href="Images\backseat6.JPG" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\backseat6.JPG" alt=""/>
+                                    <figure>115V AC plug-in</figure>
                                 </a>
                             </div>
                             <div class="gallery-group" id="misc">
@@ -334,25 +342,31 @@
                             <div class="gallery-group" id="car_shows">
                                 <a href="Images\showCincy.jpg" data-size="1200x899" class="demo-gallery__img--main">
                                     <img src="Thumbnails\showCincy.jpg" alt=""/>
+                                    <figure>2017 Cincinnati VW/Porsche/Audi Reunion</figure>
                                 </a>
                                 <a href="Images\showCincy2.jpg" data-size="1200x900" class="demo-gallery__img--main">
                                     <img src="Thumbnails\showCincy2.jpg" alt=""/>
+                                    <figure>2017 Cincinnati VW/Porsche/Audi Reunion.  Top 50 award winner.</figure>
                                 </a>
                                 <a href="Images\showVolksfest2.JPG" data-size="1200x900"
                                    class="demo-gallery__img--main">
                                     <img src="Thumbnails\showVolksfest2.JPG" alt=""/>
+                                    <figure>2017 COVVC Volksfest</figure>
                                 </a>
                                 <a href="Images\showVolksfest3.JPG" data-size="1200x900"
                                    class="demo-gallery__img--main">
                                     <img src="Thumbnails\showVolksfest3.JPG" alt=""/>
+                                    <figure>2017 COVVC Volksfest</figure>
                                 </a>
                                 <a href="Images\showVolksfest4.JPG" data-size="1200x900"
                                    class="demo-gallery__img--main">
                                     <img src="Thumbnails\showVolksfest4.JPG" alt=""/>
+                                    <figure>2017 COVVC Volksfest</figure>
                                 </a>
                                 <a href="Images\showVolksfest5.JPG" data-size="1200x900"
                                    class="demo-gallery__img--main">
                                     <img src="Thumbnails\showVolksfest5.JPG" alt=""/>
+                                    <figure>2017 COVVC Volksfest</figure>
                                 </a>
                             </div>
 
@@ -462,7 +476,7 @@
 						src: el.getAttribute('href'),
 						w: parseInt(size[0], 10),
 						h: parseInt(size[1], 10),
-						author: el.getAttribute('data-author')
+						//author: el.getAttribute('data-author')
 			        };
 
 			        item.el = el; // save link to element for getThumbBoundsFn
@@ -614,7 +628,8 @@
 							captionEl.children[0].innerText = '';
 							return false;
 						}
-						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						//captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+                        captionEl.children[0].innerHTML = item.title;
 						return true;
 			        },
 					
